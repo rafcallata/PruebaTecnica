@@ -15,7 +15,7 @@ namespace PruebaTecnicaRafaelCallata.Controllers
         public async Task<IActionResult> GetArticulos()
         {
             client = new HttpClient();
-            string url = "ApiKey";
+            string url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=cc4c2db17b0f49ed968a739a645ee18c";
             string response = await client.GetStringAsync(url);
 
             NoticiasResponse newsObject = JsonConvert.DeserializeObject<NoticiasResponse>(response);
@@ -30,7 +30,7 @@ namespace PruebaTecnicaRafaelCallata.Controllers
         public async Task<IActionResult> GetDetalleArticulo(int id)
         {
             client = new HttpClient();
-            string url = "ApiKey";
+            string url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=cc4c2db17b0f49ed968a739a645ee18c";
             string response = await client.GetStringAsync(url);
 
             NoticiasResponse newsObject = JsonConvert.DeserializeObject<NoticiasResponse>(response);
